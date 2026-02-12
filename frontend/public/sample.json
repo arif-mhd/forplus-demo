@@ -1,0 +1,1697 @@
+[
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "LUNA II Series",
+    "type": "Indirect",
+    "code": "HJLF6060A",
+    "power": "36W",
+    "current": "900mA",
+    "lumen_4000k": "3960lm",
+    "efficacy_4000k": "110lm/W",
+    "size_mm": "595*595*90",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "Up to 140LM/W"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "LUNA II Series",
+    "type": "Indirect",
+    "code": "HJLF6060B",
+    "power": "42W",
+    "current": "1050mA",
+    "lumen_4000k": "4620lm",
+    "efficacy_4000k": "110lm/W",
+    "size_mm": "595*595*90",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "Up to 140LM/W"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "LUNA II Series",
+    "type": "Indirect",
+    "code": "HJLF6060A1",
+    "power": "28W",
+    "current": "800mA",
+    "lumen_4000k": "3920lm",
+    "efficacy_4000k": "140lm/W",
+    "size_mm": "595*595*90",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "Up to 140LM/W"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "LUNA II Series",
+    "type": "Indirect",
+    "code": "HJLF6060B1",
+    "power": "33W",
+    "current": "950mA",
+    "lumen_4000k": "4620lm",
+    "efficacy_4000k": "140lm/W",
+    "size_mm": "595*595*90",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "Up to 140LM/W"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "LUNA III Series",
+    "type": "Indirect",
+    "code": "HJLF6060A3",
+    "power": "36W",
+    "current": "900mA",
+    "lumen_4000k": "3960lm",
+    "efficacy_4000k": "110lm/W",
+    "size_mm": "595*595*50mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "Up to 140LM/W"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "LUNA III Series",
+    "type": "Indirect",
+    "code": "HJLF6060B3",
+    "power": "42W",
+    "current": "1050mA",
+    "lumen_4000k": "4620lm",
+    "efficacy_4000k": "110lm/W",
+    "size_mm": "595*595*50mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "Up to 140LM/W"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "LUNA III Series",
+    "type": "Indirect",
+    "code": "HJLF6060A4",
+    "power": "28W",
+    "current": "800mA",
+    "lumen_4000k": "3920lm",
+    "efficacy_4000k": "140lm/W",
+    "size_mm": "595*595*50mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "Up to 140LM/W"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "LUNA III Series",
+    "type": "Indirect",
+    "code": "HJLF6060B4",
+    "power": "33W",
+    "current": "950mA",
+    "lumen_4000k": "4620lm",
+    "efficacy_4000k": "140lm/W",
+    "size_mm": "595*595*50mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "Up to 140LM/W"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "Drow Series",
+    "type": "Backlit",
+    "code": "HJTL3060",
+    "power": "24W",
+    "current": "600mA",
+    "lumen_4000k": "3360lm",
+    "efficacy_4000k": "140lm/W",
+    "size_mm": "295*595*50mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "Drow Series",
+    "type": "Backlit",
+    "code": "HJTL6060",
+    "power": "36W",
+    "current": "900mA",
+    "lumen_4000k": "5040lm",
+    "efficacy_4000k": "140lm/W",
+    "size_mm": "595*595*50mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "Drow Series",
+    "type": "Backlit",
+    "code": "HJTL6060",
+    "power": "42W",
+    "current": "1050mA",
+    "lumen_4000k": "5880lm",
+    "efficacy_4000k": "140lm/W",
+    "size_mm": "595*595*50mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "Drow Series",
+    "type": "Backlit",
+    "code": "HJTL30120",
+    "power": "42W",
+    "current": "1050mA",
+    "lumen_4000k": "5880lm",
+    "efficacy_4000k": "140lm/W",
+    "size_mm": "295*1195*50mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "Drow Series",
+    "type": "Backlit",
+    "code": "HJTL60120",
+    "power": "84W",
+    "current": "1050mA",
+    "lumen_4000k": "11760lm",
+    "efficacy_4000k": "140lm/W",
+    "size_mm": "595*1195*50mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "LUNA I Series",
+    "type": "Indirect",
+    "code": "HJLF30120A",
+    "power": "36W",
+    "current": "900mA",
+    "lumen_4000k": "3960lm",
+    "efficacy_4000k": "110lm/W",
+    "size_mm": "295*1195*90mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "Up to 140LM/W"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "LUNA I Series",
+    "type": "Indirect",
+    "code": "HJLF30120B",
+    "power": "42W",
+    "current": "1050mA",
+    "lumen_4000k": "4620lm",
+    "efficacy_4000k": "110lm/W",
+    "size_mm": "295*1195*90mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "Up to 140LM/W"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "BM series",
+    "type": "Front access",
+    "code": "HJBM3060",
+    "power": "24W",
+    "current": "600mA",
+    "lumen_4000k": "2640lm",
+    "efficacy_4000k": "110lm/W",
+    "size_mm": "295*595*90mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°",
+      "IP": "IP54"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "IP65"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "BM series",
+    "type": "Front access",
+    "code": "HJBM6060",
+    "power": "36W",
+    "current": "900mA",
+    "lumen_4000k": "3960lm",
+    "efficacy_4000k": "110lm/W",
+    "size_mm": "595*595*90mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°",
+      "IP": "IP54"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "IP65"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "BM series",
+    "type": "Front access",
+    "code": "HJBM6060",
+    "power": "42W",
+    "current": "1050mA",
+    "lumen_4000k": "4620lm",
+    "efficacy_4000k": "110lm/W",
+    "size_mm": "595*595*90mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°",
+      "IP": "IP54"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "IP65"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "BM series",
+    "type": "Front access",
+    "code": "HJBM30120",
+    "power": "42W",
+    "current": "1050mA",
+    "lumen_4000k": "4620lm",
+    "efficacy_4000k": "110lm/W",
+    "size_mm": "295*1195*90mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°",
+      "IP": "IP54"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "IP65"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "BM series",
+    "type": "Front access",
+    "code": "HJBM60120",
+    "power": "84W",
+    "current": "1050mA",
+    "lumen_4000k": "9240lm",
+    "efficacy_4000k": "110lm/W",
+    "size_mm": "595*1195*90mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°",
+      "IP": "IP54"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "IP65"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "Storm Series",
+    "type": "Prison lighting",
+    "code": "HJPS3060A",
+    "power": "30W",
+    "current": "250mA",
+    "lumen_4000k": "3300lm",
+    "efficacy_4000k": "110lm/W",
+    "size_mm": "715*305*75mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°",
+      "IP": "IP65",
+      "IK": "IK10"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "60° beam angle"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "Storm Series",
+    "type": "Prison lighting",
+    "code": "HJPS3060B",
+    "power": "40W",
+    "current": "350mA",
+    "lumen_4000k": "4400lm",
+    "efficacy_4000k": "110lm/W",
+    "size_mm": "715*305*75mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°",
+      "IP": "IP65",
+      "IK": "IK10"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "60° beam angle"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "Storm Series",
+    "type": "Prison lighting",
+    "code": "HJPS30120A",
+    "power": "36W",
+    "current": "250mA",
+    "lumen_4000k": "3960lm",
+    "efficacy_4000k": "110lm/W",
+    "size_mm": "1315*305*75mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°",
+      "IP": "IP65",
+      "IK": "IK10"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "60° beam angle"]
+  },
+  {
+    "category": "LED TROFFER LIGHT",
+    "series": "Storm Series",
+    "type": "Prison lighting",
+    "code": "HJPS30120B",
+    "power": "50W",
+    "current": "350mA",
+    "lumen_4000k": "5500lm",
+    "efficacy_4000k": "110lm/W",
+    "size_mm": "1315*305*75mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°",
+      "IP": "IP65",
+      "IK": "IK10"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "60° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "Razor Series",
+    "type": "Edgelit",
+    "code": "HJEL3060",
+    "power": "24W",
+    "current": "600mA",
+    "lumen_4000k": "2400lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "295*595*10",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 160LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "Razor Series",
+    "type": "Edgelit",
+    "code": "HJEL6060",
+    "power": "36W",
+    "current": "900mA",
+    "lumen_4000k": "3600lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "595*595*10",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 160LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "Razor Series",
+    "type": "Edgelit",
+    "code": "HJEL6060",
+    "power": "42W",
+    "current": "1050mA",
+    "lumen_4000k": "4200lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "595*595*10",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 160LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "Razor Series",
+    "type": "Edgelit",
+    "code": "HJEL30120",
+    "power": "42W",
+    "current": "1050mA",
+    "lumen_4000k": "4200lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "295*1195*10",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 160LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "Razor Series",
+    "type": "Edgelit",
+    "code": "HJEL60120",
+    "power": "72W",
+    "current": "900mA",
+    "lumen_4000k": "7200lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "595*1195*10",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 160LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "LEGO Series",
+    "type": "DF40",
+    "code": "HJDF40-LGA1",
+    "power": "30W",
+    "current": "750mA",
+    "lumen_4000k_white": "4500lm",
+    "lumen_4000k_black": "4200lm",
+    "efficacy_4000k_white": "150lm/W",
+    "efficacy_4000k_black": "140lm/W",
+    "size_mm": "595*595*22mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<17",
+      "beam_angle": "80°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "65° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "LEGO Series",
+    "type": "DF40",
+    "code": "HJDF40-LGA2",
+    "power": "36W",
+    "current": "900mA",
+    "lumen_4000k_white": "5400lm",
+    "lumen_4000k_black": "5040lm",
+    "efficacy_4000k_white": "150lm/W",
+    "efficacy_4000k_black": "140lm/W",
+    "size_mm": "595*595*22mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<17",
+      "beam_angle": "80°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "65° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "LEGO Series",
+    "type": "DF40",
+    "code": "HJDF40-LGA3",
+    "power": "42W",
+    "current": "1050mA",
+    "lumen_4000k_white": "6300lm",
+    "lumen_4000k_black": "5880lm",
+    "efficacy_4000k_white": "150lm/W",
+    "efficacy_4000k_black": "140lm/W",
+    "size_mm": "595*595*22mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<17",
+      "beam_angle": "80°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "65° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "LEGO Series",
+    "type": "DF40",
+    "code": "HJDF40-LGB1",
+    "power": "30W",
+    "current": "750mA",
+    "lumen_4000k_white": "4500lm",
+    "lumen_4000k_black": "4200lm",
+    "efficacy_4000k_white": "150lm/W",
+    "efficacy_4000k_black": "140lm/W",
+    "size_mm": "295*1195*22mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<17",
+      "beam_angle": "80°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "65° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "LEGO Series",
+    "type": "DF40",
+    "code": "HJDF40-LGB2",
+    "power": "36W",
+    "current": "900mA",
+    "lumen_4000k_white": "5400lm",
+    "lumen_4000k_black": "5040lm",
+    "efficacy_4000k_white": "150lm/W",
+    "efficacy_4000k_black": "140lm/W",
+    "size_mm": "295*1195*22mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<17",
+      "beam_angle": "80°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "65° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "LEGO Series",
+    "type": "DF40",
+    "code": "HJDF40-LGB3",
+    "power": "42W",
+    "current": "1050mA",
+    "lumen_4000k_white": "6300lm",
+    "lumen_4000k_black": "5880lm",
+    "efficacy_4000k_white": "150lm/W",
+    "efficacy_4000k_black": "140lm/W",
+    "size_mm": "295*1195*22mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<17",
+      "beam_angle": "80°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "65° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "KOLT Series",
+    "type": "Backlit",
+    "code": "HJBLK3030",
+    "power": "16W",
+    "current": "400mA",
+    "lumen_4000k": "1600lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "295*295*35mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "KOLT Series",
+    "type": "Backlit",
+    "code": "HJBLK3060",
+    "power": "24W",
+    "current": "600mA",
+    "lumen_4000k": "2400lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "295*595*35mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "KOLT Series",
+    "type": "Backlit",
+    "code": "HJBLK6060",
+    "power": "36W",
+    "current": "900mA",
+    "lumen_4000k": "3600lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "595*595*35mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "KOLT Series",
+    "type": "Backlit",
+    "code": "HJBLK6060",
+    "power": "42W",
+    "current": "1050mA",
+    "lumen_4000k": "4200lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "595*595*35mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "KOLT Series",
+    "type": "Backlit",
+    "code": "HJBLK6060H1",
+    "power": "23W",
+    "current": "650mA",
+    "lumen_4000k": "3680lm",
+    "efficacy_4000k": "160lm/W",
+    "size_mm": "595*595*35mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "KOLT Series",
+    "type": "Backlit",
+    "code": "HJBLK6060H2",
+    "power": "23W",
+    "current": "650mA",
+    "lumen_4000k": "4140lm",
+    "efficacy_4000k": "180lm/W",
+    "size_mm": "595*595*35mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "KOLT Series",
+    "type": "Backlit",
+    "code": "HJBLK6262",
+    "power": "40W",
+    "current": "1050mA",
+    "lumen_4000k": "4800lm",
+    "efficacy_4000k": "120lm/W",
+    "size_mm": "620*620*35mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "KOLT Series",
+    "type": "Backlit",
+    "code": "HJBLK30120",
+    "power": "42W",
+    "current": "1050mA",
+    "lumen_4000k": "4200lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "295*1195*35mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "KOLT Series",
+    "type": "Backlit",
+    "code": "HJBLK60120",
+    "power": "80W",
+    "current": "1050mA",
+    "lumen_4000k": "8000lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "595*1195*35mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "Invoker Series",
+    "type": "Backlit",
+    "code": "HJBLA3030",
+    "power": "16W",
+    "current": "400mA",
+    "lumen_4000k": "1600lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "295*295*45mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "Invoker Series",
+    "type": "Backlit",
+    "code": "HJBLA3060",
+    "power": "24W",
+    "current": "600mA",
+    "lumen_4000k": "2400lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "295*595*45mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "Invoker Series",
+    "type": "Backlit",
+    "code": "HJBLA6060",
+    "power": "36W",
+    "current": "900mA",
+    "lumen_4000k": "3600lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "595*595*45mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "Invoker Series",
+    "type": "Backlit",
+    "code": "HJBLA6060",
+    "power": "42W",
+    "current": "1050mA",
+    "lumen_4000k": "4200lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "595*595*45mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "Invoker Series",
+    "type": "Backlit",
+    "code": "HJBLA30120",
+    "power": "36W",
+    "current": "900mA",
+    "lumen_4000k": "3600lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "295*1195*45mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "Invoker Series",
+    "type": "Backlit",
+    "code": "HJBLA30120",
+    "power": "42W",
+    "current": "1050mA",
+    "lumen_4000k": "4200lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "295*1195*45mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "Phoanix Series",
+    "type": "Airvent",
+    "code": "HJAT6060A",
+    "power": "36W",
+    "current": "900mA",
+    "lumen_4000k": "3600lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "595*595*35mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "Phoanix Series",
+    "type": "Airvent",
+    "code": "HJAT30120A",
+    "power": "42W",
+    "current": "1050mA",
+    "lumen_4000k": "4200lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "295*1195*35mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "Phoanix Series",
+    "type": "Airvent",
+    "code": "HJAT60120A",
+    "power": "72W",
+    "current": "900mA",
+    "lumen_4000k": "7200lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "595*1195*35mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "Phoanix Series",
+    "type": "Airvent",
+    "code": "HJAT6060B",
+    "power": "24W",
+    "current": "600mA",
+    "lumen_4000k": "2400lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "595*595*35mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "Phoanix Series",
+    "type": "Airvent",
+    "code": "HJAT30120B",
+    "power": "30W",
+    "current": "750mA",
+    "lumen_4000k": "3000lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "295*1195*35mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED PANEL LIGHT",
+    "series": "Phoanix Series",
+    "type": "Airvent",
+    "code": "HJAT60120B",
+    "power": "42W",
+    "current": "1050mA",
+    "lumen_4000k": "4200lm",
+    "efficacy_4000k": "100lm/W",
+    "size_mm": "595*1195*35mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<22",
+      "beam_angle": "120°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "UGR<19", "Up to 180LM/W", "90° beam angle"]
+  },
+  {
+    "category": "LED LOUVER FITTING",
+    "series": "Mars B Series",
+    "type": "Surfaced",
+    "code": "HJLF6060-B",
+    "power": "29W",
+    "current": "200mA",
+    "lumen_4000k": "3770lm",
+    "efficacy_4000k": "130lm/W",
+    "size_mm": "595*595*40mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LOUVER FITTING",
+    "series": "Mars B Series",
+    "type": "Surfaced",
+    "code": "HJLF6060-B",
+    "power": "36W",
+    "current": "250mA",
+    "lumen_4000k": "4680lm",
+    "efficacy_4000k": "130lm/W",
+    "size_mm": "595*595*40mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LOUVER FITTING",
+    "series": "Mars B Series",
+    "type": "Surfaced",
+    "code": "HJLF6262-B",
+    "power": "29W",
+    "current": "200mA",
+    "lumen_4000k": "3770lm",
+    "efficacy_4000k": "130lm/W",
+    "size_mm": "620*620*40mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LOUVER FITTING",
+    "series": "Mars B Series",
+    "type": "Surfaced",
+    "code": "HJLF6262-B",
+    "power": "36W",
+    "current": "250mA",
+    "lumen_4000k": "4680lm",
+    "efficacy_4000k": "130lm/W",
+    "size_mm": "620*620*40mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LOUVER FITTING",
+    "series": "Mars B Series",
+    "type": "Surfaced",
+    "code": "HJLF30120-B",
+    "power": "36W",
+    "current": "250mA",
+    "lumen_4000k": "4680lm",
+    "efficacy_4000k": "130lm/W",
+    "size_mm": "295*1195*40mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LOUVER FITTING",
+    "series": "Mars B Series",
+    "type": "Surfaced",
+    "code": "HJLF30120-B",
+    "power": "40W",
+    "current": "300mA",
+    "lumen_4000k": "5200lm",
+    "efficacy_4000k": "130lm/W",
+    "size_mm": "295*1195*40mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LOUVER FITTING",
+    "series": "Mars B Series",
+    "type": "Surfaced",
+    "code": "HJLF30120-B",
+    "power": "45W",
+    "current": "350mA",
+    "lumen_4000k": "5850lm",
+    "efficacy_4000k": "130lm/W",
+    "size_mm": "295*1195*40mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LOUVER FITTING",
+    "series": "Mars B Series",
+    "type": "Surfaced",
+    "code": "HJLF13150-B",
+    "power": "21W",
+    "current": "300mA",
+    "lumen_4000k": "2730lm",
+    "efficacy_4000k": "130lm/W",
+    "size_mm": "130*1495*40mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LOUVER FITTING",
+    "series": "Mars B Series",
+    "type": "Surfaced",
+    "code": "HJLF13150-B",
+    "power": "24W",
+    "current": "350mA",
+    "lumen_4000k": "3120lm",
+    "efficacy_4000k": "130lm/W",
+    "size_mm": "130*1495*40mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LOUVER FITTING",
+    "series": "Mars B Series",
+    "type": "Surfaced",
+    "code": "HJLF30150-B",
+    "power": "40W",
+    "current": "300mA",
+    "lumen_4000k": "5200lm",
+    "efficacy_4000k": "130lm/W",
+    "size_mm": "295*1495*40mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LOUVER FITTING",
+    "series": "Mars B Series",
+    "type": "Surfaced",
+    "code": "HJLF30150-B",
+    "power": "45W",
+    "current": "350mA",
+    "lumen_4000k": "5850lm",
+    "efficacy_4000k": "130lm/W",
+    "size_mm": "295*1495*40mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LOUVER FITTING",
+    "series": "Mars series I",
+    "code": "HJLF3060-A",
+    "power": "24W",
+    "current": "600mA",
+    "lumen_4000k": "3120lm",
+    "efficacy_4000k": "130lm/W",
+    "size_mm": "295*595*38mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "Up to 180LM/W"]
+  },
+  {
+    "category": "LED LOUVER FITTING",
+    "series": "Mars series I",
+    "code": "HJLF6060-A",
+    "power": "36W",
+    "current": "900mA",
+    "lumen_4000k": "4680lm",
+    "efficacy_4000k": "130lm/W",
+    "size_mm": "595*595*38mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "Up to 180LM/W"]
+  },
+  {
+    "category": "LED LOUVER FITTING",
+    "series": "Mars series I",
+    "code": "HJLF6060-A",
+    "power": "42W",
+    "current": "1050mA",
+    "lumen_4000k": "5460lm",
+    "efficacy_4000k": "130lm/W",
+    "size_mm": "595*595*38mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "Up to 180LM/W"]
+  },
+  {
+    "category": "LED LOUVER FITTING",
+    "series": "Mars series I",
+    "code": "HJLF30120-A",
+    "power": "42W",
+    "current": "1050mA",
+    "lumen_4000k": "5460lm",
+    "efficacy_4000k": "130lm/W",
+    "size_mm": "295*1195*38mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "Up to 180LM/W"]
+  },
+  {
+    "category": "LED LOUVER FITTING",
+    "series": "Mars series I",
+    "code": "HJLF60120-A",
+    "power": "84W",
+    "current": "1050mA",
+    "lumen_4000k": "10920lm",
+    "efficacy_4000k": "130lm/W",
+    "size_mm": "595*1195*38mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "Up to 180LM/W"]
+  },
+  {
+    "category": "LED LOUVER FITTING",
+    "series": "Mars series I",
+    "code": "HJLF30150-A",
+    "power": "50W",
+    "current": "1300mA",
+    "lumen_4000k": "6500lm",
+    "efficacy_4000k": "130lm/W",
+    "size_mm": "295*1495*38mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "Up to 180LM/W"]
+  },
+  {
+    "category": "LED Linear",
+    "series": "BS series",
+    "code": "HJBS60W",
+    "power": "26W",
+    "current": "350mA",
+    "lumen": "3640lm",
+    "efficacy": "140lm/W",
+    "size_mm": "600*50*65mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°",
+      "IP": "IP40"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "Up to 180LM/W"]
+  },
+  {
+    "category": "LED Linear",
+    "series": "BS series",
+    "code": "HJBS120W",
+    "power": "36W",
+    "current": "350mA",
+    "lumen": "5040lm",
+    "efficacy": "140lm/W",
+    "size_mm": "1100*50*65mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°",
+      "IP": "IP40"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "Up to 180LM/W"]
+  },
+  {
+    "category": "LED Linear",
+    "series": "BS series",
+    "code": "HJBS150W",
+    "power": "50W",
+    "current": "350mA",
+    "lumen": "7000lm",
+    "efficacy": "140lm/W",
+    "size_mm": "1500*50*65mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°",
+      "IP": "IP40"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "Up to 180LM/W"]
+  },
+  {
+    "category": "LED LINEAR",
+    "series": "G series",
+    "type": "waterproof",
+    "code": "HJG118",
+    "power": "20W",
+    "current": "250mA",
+    "lumen_4000k": "2400lm",
+    "efficacy_4000k": "120lm/W",
+    "size_mm": "580*75*66mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°",
+      "IP": "IP65",
+      "IK": "IK08"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LINEAR",
+    "series": "G series",
+    "type": "waterproof",
+    "code": "HJG136",
+    "power": "40W",
+    "current": "250mA",
+    "lumen_4000k": "4800lm",
+    "efficacy_4000k": "120lm/W",
+    "size_mm": "1180*75*66mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°",
+      "IP": "IP65",
+      "IK": "IK08"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LINEAR",
+    "series": "G series",
+    "type": "waterproof",
+    "code": "HJG158",
+    "power": "50W",
+    "current": "350mA",
+    "lumen_4000k": "6000lm",
+    "efficacy_4000k": "120lm/W",
+    "size_mm": "1480*75*66mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°",
+      "IP": "IP65",
+      "IK": "IK08"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LINEAR",
+    "series": "K series",
+    "type": "waterproof",
+    "code": "HJK118",
+    "power": "14W",
+    "current": "350mA",
+    "lumen_4000k": "1680lm",
+    "efficacy_4000k": "120lm/W",
+    "size_mm": "665x70x80mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°",
+      "IP": "IP65",
+      "IK": "IK08"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LINEAR",
+    "series": "K series",
+    "type": "waterproof",
+    "code": "HJK218",
+    "power": "28W",
+    "current": "350mA",
+    "lumen_4000k": "3360lm",
+    "efficacy_4000k": "120lm/W",
+    "size_mm": "665x100x80mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°",
+      "IP": "IP65",
+      "IK": "IK08"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LINEAR",
+    "series": "K series",
+    "type": "waterproof",
+    "code": "HJK136",
+    "power": "24W",
+    "current": "600mA",
+    "lumen_4000k": "2880lm",
+    "efficacy_4000k": "120lm/W",
+    "size_mm": "1265x70x80mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°",
+      "IP": "IP65",
+      "IK": "IK08"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LINEAR",
+    "series": "K series",
+    "type": "waterproof",
+    "code": "HJK236",
+    "power": "48W",
+    "current": "650mA",
+    "lumen_4000k": "5760lm",
+    "efficacy_4000k": "120lm/W",
+    "size_mm": "1265x100x80mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°",
+      "IP": "IP65",
+      "IK": "IK08"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LINEAR",
+    "series": "K series",
+    "type": "waterproof",
+    "code": "HJK158",
+    "power": "34W",
+    "current": "200mA",
+    "lumen_4000k": "4080lm",
+    "efficacy_4000k": "120lm/W",
+    "size_mm": "1565x70x80mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°",
+      "IP": "IP65",
+      "IK": "IK08"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LINEAR",
+    "series": "K series",
+    "type": "waterproof",
+    "code": "HJK258",
+    "power": "60W",
+    "current": "350mA",
+    "lumen_4000k": "7200lm",
+    "efficacy_4000k": "120lm/W",
+    "size_mm": "1565x100x80mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°",
+      "IP": "IP65",
+      "IK": "IK08"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LINEAR",
+    "series": "X series",
+    "type": "waterproof",
+    "code": "HJX118",
+    "power": "28W",
+    "current": "350mA",
+    "lumen_4000k": "3360lm",
+    "efficacy_4000k": "120lm/W",
+    "size_mm": "600*85*78mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°",
+      "IP": "IP65",
+      "IK": "IK08"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LINEAR",
+    "series": "X series",
+    "type": "waterproof",
+    "code": "HJX136",
+    "power": "48W",
+    "current": "350mA",
+    "lumen_4000k": "5760lm",
+    "efficacy_4000k": "120lm/W",
+    "size_mm": "1200*85*78mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°",
+      "IP": "IP65",
+      "IK": "IK08"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LINEAR",
+    "series": "X series",
+    "type": "waterproof",
+    "code": "HJX158",
+    "power": "52W",
+    "current": "350mA",
+    "lumen_4000k": "6240lm",
+    "efficacy_4000k": "120lm/W",
+    "size_mm": "1500*85*78mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<16",
+      "beam_angle": "120°",
+      "IP": "IP65",
+      "IK": "IK08"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee"]
+  },
+  {
+    "category": "LED LINEAR",
+    "series": "LD60 series",
+    "code": "HJLD60-1",
+    "power": "16W",
+    "current": "500mA",
+    "lumen": "2240lm",
+    "efficacy": "140lm/W",
+    "size_mm": "1195*37*61mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "60° beam angle"]
+  },
+  {
+    "category": "LED LINEAR",
+    "series": "LD60 series",
+    "code": "HJLD60-2",
+    "power": "20W",
+    "current": "600mA",
+    "lumen": "2800lm",
+    "efficacy": "140lm/W",
+    "size_mm": "1195*37*61mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "60° beam angle"]
+  },
+  {
+    "category": "LED LINEAR",
+    "series": "LD60 series",
+    "code": "HJLD60-3",
+    "power": "22W",
+    "current": "700mA",
+    "lumen": "3080lm",
+    "efficacy": "140lm/W",
+    "size_mm": "1195*37*61mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "60° beam angle"]
+  },
+  {
+    "category": "LED LINEAR",
+    "series": "LD60 series",
+    "code": "HJLD60-3",
+    "power": "26W",
+    "current": "800mA",
+    "lumen": "3640lm",
+    "efficacy": "140lm/W",
+    "size_mm": "1195*37*61mm",
+    "specifications": {
+      "CRI": "80",
+      "PF": ">0.9",
+      "UGR": "<19",
+      "beam_angle": "90°"
+    },
+    "options": ["AC 110-277V", "CRI 90", "3CCT", "0-10V", "DALI", "Emergency", "WiFi", "Bluetooth", "ZigBee", "60° beam angle"]
+  }
+]
