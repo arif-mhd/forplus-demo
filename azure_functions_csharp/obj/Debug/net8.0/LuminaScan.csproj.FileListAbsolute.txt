@@ -1,0 +1,338 @@
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\LuminaScan.csproj.AssemblyReference.cache
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\LuminaScan.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\LuminaScan.AssemblyInfoInputs.cache
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\LuminaScan.AssemblyInfo.cs
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\LuminaScan.csproj.CoreCompileInputs.cache
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Azure.Cosmos.ServiceInterop.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Cosmos.CRTCompat.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\msvcp140.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\vcruntime140.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\vcruntime140_1.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\host.json
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\local.settings.json
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\LuminaScan.exe
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\LuminaScan.deps.json
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\LuminaScan.runtimeconfig.json
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\LuminaScan.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\LuminaScan.pdb
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Azure.Storage.Blobs.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Azure.Storage.Common.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Grpc.Core.Api.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Grpc.Net.Client.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Grpc.Net.ClientFactory.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Grpc.Net.Common.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.ApplicationInsights.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.AI.DependencyCollector.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.AI.EventCounterCollector.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.AI.WindowsServer.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.ApplicationInsights.WorkerService.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Azure.Cosmos.Client.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Azure.Cosmos.Core.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Azure.Cosmos.Direct.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Azure.Cosmos.Serialization.HybridRow.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.ApplicationInsights.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.Core.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.Extensions.Abstractions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.Extensions.CosmosDB.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.Extensions.Http.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.Extensions.Storage.Blobs.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Azure.Functions.Worker.Grpc.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Bcl.HashCode.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Azure.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Configuration.CommandLine.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Hosting.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Logging.ApplicationInsights.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Logging.Console.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Logging.EventLog.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Logging.EventSource.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\System.ClientModel.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\System.IO.Hashing.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\runtimes\win-x64\native\Cosmos.CRTCompat.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Azure.Cosmos.ServiceInterop.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\runtimes\win-x64\native\msvcp140.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\runtimes\win-x64\native\vcruntime140.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\runtimes\win-x64\native\vcruntime140_1.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\LuminaScan.csproj.Up2Date
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\LuminaScan.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\refint\LuminaScan.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\LuminaScan.pdb
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\LuminaScan.genruntimeconfig.cache
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\ref\LuminaScan.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Cosmos.ServiceInterop.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Cosmos.CRTCompat.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\msvcp140.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\vcruntime140.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\vcruntime140_1.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\host.json
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\local.settings.json
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\LuminaScan.exe
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\LuminaScan.deps.json
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\LuminaScan.runtimeconfig.json
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\LuminaScan.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\LuminaScan.pdb
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Azure.Core.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Azure.Identity.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Azure.Storage.Blobs.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Azure.Storage.Common.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Google.Protobuf.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Grpc.Core.Api.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Grpc.Net.Client.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Grpc.Net.ClientFactory.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Grpc.Net.Common.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.ApplicationInsights.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.AI.DependencyCollector.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.AI.EventCounterCollector.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.AI.WindowsServer.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.ApplicationInsights.WorkerService.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Cosmos.Client.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Cosmos.Core.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Cosmos.Direct.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Cosmos.Serialization.HybridRow.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Functions.Worker.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Functions.Worker.ApplicationInsights.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Functions.Worker.Core.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Functions.Worker.Extensions.Abstractions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Functions.Worker.Extensions.CosmosDB.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Functions.Worker.Extensions.Http.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Functions.Worker.Extensions.Storage.Blobs.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Functions.Worker.Grpc.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Bcl.HashCode.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Azure.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Configuration.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Configuration.CommandLine.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Diagnostics.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Hosting.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Logging.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Logging.ApplicationInsights.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Logging.Console.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Logging.EventLog.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Logging.EventSource.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Options.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Primitives.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Identity.Client.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Win32.SystemEvents.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Newtonsoft.Json.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.ClientModel.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Configuration.ConfigurationManager.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Diagnostics.EventLog.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Drawing.Common.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.IO.Hashing.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.IO.Pipelines.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Memory.Data.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Security.Permissions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Text.Encodings.Web.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Text.Json.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Windows.Extensions.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win-x64\native\Cosmos.CRTCompat.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win-x64\native\Microsoft.Azure.Cosmos.ServiceInterop.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win-x64\native\msvcp140.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win-x64\native\vcruntime140.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win-x64\native\vcruntime140_1.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Anu Jayaram\Desktop\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Cosmos.ServiceInterop.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Cosmos.CRTCompat.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\msvcp140.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\vcruntime140.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\vcruntime140_1.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\host.json
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\local.settings.json
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\LuminaScan.exe
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\LuminaScan.deps.json
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\LuminaScan.runtimeconfig.json
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\LuminaScan.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\LuminaScan.pdb
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Azure.Core.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Azure.Identity.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Azure.Storage.Blobs.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Azure.Storage.Common.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Google.Protobuf.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Grpc.Core.Api.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Grpc.Net.Client.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Grpc.Net.ClientFactory.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Grpc.Net.Common.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.ApplicationInsights.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.AI.DependencyCollector.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.AI.EventCounterCollector.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.AI.WindowsServer.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.ApplicationInsights.WorkerService.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Cosmos.Client.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Cosmos.Core.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Cosmos.Direct.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Cosmos.Serialization.HybridRow.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Functions.Worker.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Functions.Worker.ApplicationInsights.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Functions.Worker.Core.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Functions.Worker.Extensions.Abstractions.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Functions.Worker.Extensions.CosmosDB.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Functions.Worker.Extensions.Http.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Functions.Worker.Extensions.Storage.Blobs.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Azure.Functions.Worker.Grpc.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Bcl.HashCode.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Azure.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Configuration.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Configuration.CommandLine.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Diagnostics.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Hosting.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Logging.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Logging.ApplicationInsights.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Logging.Console.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Logging.EventLog.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Logging.EventSource.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Options.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Extensions.Primitives.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Identity.Client.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Microsoft.Win32.SystemEvents.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\Newtonsoft.Json.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.ClientModel.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Configuration.ConfigurationManager.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Diagnostics.EventLog.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Drawing.Common.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.IO.Hashing.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.IO.Pipelines.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Memory.Data.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Security.Permissions.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Text.Encodings.Web.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Text.Json.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\System.Windows.Extensions.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win-x64\native\Cosmos.CRTCompat.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win-x64\native\Microsoft.Azure.Cosmos.ServiceInterop.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win-x64\native\msvcp140.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win-x64\native\vcruntime140.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win-x64\native\vcruntime140_1.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\bin\output\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\LuminaScan.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\LuminaScan.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\LuminaScan.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\LuminaScan.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\LuminaScan.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\LuminaScan.csproj.Up2Date
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\LuminaScan.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\refint\LuminaScan.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\LuminaScan.pdb
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\LuminaScan.genruntimeconfig.cache
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\ref\LuminaScan.dll
+C:\Users\Lenovo\Downloads\lighting-parser\lighting-parser\lighting-parser\azure_functions_csharp\obj\Debug\net8.0\LuminaScan.sourcelink.json
