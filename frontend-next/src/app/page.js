@@ -158,7 +158,7 @@ export default function Home() {
                         refreshCart={refreshCart}
                     />
                 )}
-                {activeTab === 'brands' && <BrandsPage />}
+                {activeTab === 'brands' && <BrandsPage onUpdate={() => loadData(sessionId)} />}
                 {activeTab === 'upload' && (
                     <UploadBrochure onViewCatalog={() => setActiveTab('catalog')} />
                 )}

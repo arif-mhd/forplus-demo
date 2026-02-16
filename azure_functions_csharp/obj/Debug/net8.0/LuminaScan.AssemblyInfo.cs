@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LuminaScan")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ad8d87999fa0508333cbd04e0f891548b3a1eaf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b8a1ebd2dc1f0d9d438828e85a56e53089695cd")]
 [assembly: System.Reflection.AssemblyProductAttribute("LuminaScan")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LuminaScan")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

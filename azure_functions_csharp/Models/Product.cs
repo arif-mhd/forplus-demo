@@ -55,6 +55,14 @@ namespace LuminaScan.Models
         [JsonProperty("page_number")]
         [JsonPropertyName("page_number")]
         public object? PageNumber { get; set; } = 1;
+
+        [JsonProperty("is_brand_flagged")]
+        [JsonPropertyName("is_brand_flagged")]
+        public bool IsBrandFlagged { get; set; } = false;
+
+        [JsonProperty("is_product_flagged")]
+        [JsonPropertyName("is_product_flagged")]
+        public bool IsProductFlagged { get; set; } = false;
     }
 
     public class CompanyDto
@@ -70,6 +78,10 @@ namespace LuminaScan.Models
         [JsonProperty("company_address")]
         [JsonPropertyName("company_address")]
         public string? CompanyAddress { get; set; }
+
+        [JsonProperty("is_brand_flagged")]
+        [JsonPropertyName("is_brand_flagged")]
+        public bool IsBrandFlagged { get; set; }
     }
 
     public class GeminiResponse

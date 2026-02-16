@@ -39,7 +39,7 @@ const api = {
         if (!response.ok) throw new Error("AI Processing failed");
         return response.json();
     },
-    searchProducts: async ({ query = '', company = [], source_file = '', skip = 0, limit = 20 } = {})=>{
+    searchProducts: async ({ query = '', company = [], source_file = '', skip = 0, limit = 20, includeFlagged = false } = {})=>{
         const params = new URLSearchParams();
         if (query) params.append('q', query);
         if (company) {
@@ -52,14 +52,16 @@ const api = {
         if (source_file) params.append('source_file', source_file);
         params.append('skip', skip);
         params.append('limit', limit);
+        if (includeFlagged) params.append('includeFlagged', 'true');
         const response = await fetch(`${API_URL}/search_products?${params.toString()}`);
         if (!response.ok) {
             throw new Error("Search failed");
         }
         return response.json(); // Returns { products: [], total: number }
     },
-    getCompanies: async ()=>{
-        const response = await fetch(`${API_URL}/companies`);
+    getCompanies: async (includeFlagged = false)=>{
+        const url = includeFlagged ? `${API_URL}/companies?includeFlagged=true` : `${API_URL}/companies`;
+        const response = await fetch(url);
         if (!response.ok) {
             throw new Error("Failed to fetch companies");
         }
@@ -70,12 +72,13 @@ const api = {
         if (!response.ok) throw new Error("Failed to fetch brochures");
         return response.json();
     },
-    updateCompanyEmail: async (company, email, address = null)=>{
+    updateCompanyEmail: async (company, email, address = null, isBrandFlagged = null)=>{
         const body = {
-            company,
-            email
+            company
         };
+        if (email !== null && email !== undefined) body.email = email;
         if (address !== null) body.address = address;
+        if (isBrandFlagged !== null) body.is_brand_flagged = isBrandFlagged;
         const response = await fetch(`${API_URL}/update_company_email`, {
             method: 'PUT',
             headers: {
@@ -83,7 +86,7 @@ const api = {
             },
             body: JSON.stringify(body)
         });
-        if (!response.ok) throw new Error("Failed to update email");
+        if (!response.ok) throw new Error("Failed to update company details");
         return response.json();
     },
     // Cart Methods
@@ -120,6 +123,17 @@ const api = {
         });
         if (!res.ok) throw new Error('Failed to remove from cart');
         return true;
+    },
+    updateProduct: async (product)=>{
+        const res = await fetch(`${API_URL}/update_product`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(product)
+        });
+        if (!res.ok) throw new Error('Failed to update product');
+        return res.json();
     }
 };
 }),
@@ -1687,11 +1701,13 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/x.js [app-ssr] (ecmascript) <export default as X>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/external-link.js [app-ssr] (ecmascript) <export default as ExternalLink>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/search.js [app-ssr] (ecmascript) <export default as Search>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$grid$2d$3x3$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Grid3x3$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/grid-3x3.js [app-ssr] (ecmascript) <export default as Grid3x3>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$list$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__List$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/list.js [app-ssr] (ecmascript) <export default as List>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/loader-circle.js [app-ssr] (ecmascript) <export default as Loader2>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$layout$2d$grid$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__LayoutGrid$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/layout-grid.js [app-ssr] (ecmascript) <export default as LayoutGrid>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldCheck$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/shield-check.js [app-ssr] (ecmascript) <export default as ShieldCheck>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$alert$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldAlert$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/shield-alert.js [app-ssr] (ecmascript) <export default as ShieldAlert>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$flag$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Flag$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/flag.js [app-ssr] (ecmascript) <export default as Flag>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/api.js [app-ssr] (ecmascript)");
 "use client";
 ;
@@ -1699,7 +1715,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2e$js__$5b
 ;
 ;
 ;
-function BrandsPage() {
+function BrandsPage({ onUpdate }) {
     const [companies, setCompanies] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
     const [expandedCompany, setExpandedCompany] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
@@ -1717,7 +1733,7 @@ function BrandsPage() {
     const loadCompanies = async ()=>{
         setLoading(true);
         try {
-            const data = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["api"].getCompanies();
+            const data = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["api"].getCompanies(true);
             // Deduplicate companies based on name
             const uniqueCompanies = Object.values(data.reduce((acc, curr)=>{
                 const name = (curr.company || "").trim();
@@ -1782,6 +1798,20 @@ function BrandsPage() {
             setSaving(false);
         }
     };
+    const toggleFlag = async (company, currentStatus)=>{
+        if (!confirm(`Are you sure you want to ${currentStatus ? 'unflag' : 'flag'} this brand? Flagged brands will be hidden from the public catalog.`)) return;
+        try {
+            await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["api"].updateCompanyEmail(company, null, null, !currentStatus);
+            setCompanies((prev)=>prev.map((c)=>c.company === company ? {
+                        ...c,
+                        is_brand_flagged: !currentStatus
+                    } : c));
+            if (onUpdate) onUpdate();
+        } catch (err) {
+            console.error(err);
+            alert("Failed to update flag status");
+        }
+    };
     const filteredCompanies = companies.filter((co)=>(co.company || "").toLowerCase().includes(searchQuery.toLowerCase()));
     const displayedCompanies = filteredCompanies.slice(0, displayLimit);
     const hasMore = displayedCompanies.length < filteredCompanies.length;
@@ -1801,7 +1831,7 @@ function BrandsPage() {
                                     size: 20
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/BrandsPage.jsx",
-                                    lineNumber: 81,
+                                    lineNumber: 93,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1815,13 +1845,13 @@ function BrandsPage() {
                                     className: "w-full bg-zinc-50 border border-zinc-100/80 rounded-xl pl-14 pr-6 py-4 text-black placeholder-zinc-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black/5 focus:bg-white transition-all font-medium text-sm shadow-inner"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/BrandsPage.jsx",
-                                    lineNumber: 82,
+                                    lineNumber: 94,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/BrandsPage.jsx",
-                            lineNumber: 80,
+                            lineNumber: 92,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1835,7 +1865,7 @@ function BrandsPage() {
                                             children: "Database"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/BrandsPage.jsx",
-                                            lineNumber: 94,
+                                            lineNumber: 106,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1847,26 +1877,26 @@ function BrandsPage() {
                                                     children: "Entities"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/BrandsPage.jsx",
-                                                    lineNumber: 97,
+                                                    lineNumber: 109,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/BrandsPage.jsx",
-                                            lineNumber: 95,
+                                            lineNumber: 107,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/BrandsPage.jsx",
-                                    lineNumber: 93,
+                                    lineNumber: 105,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "h-8 w-px bg-zinc-200 hidden sm:block"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/BrandsPage.jsx",
-                                    lineNumber: 101,
+                                    lineNumber: 113,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1879,12 +1909,12 @@ function BrandsPage() {
                                                 size: 18
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/BrandsPage.jsx",
-                                                lineNumber: 108,
+                                                lineNumber: 120,
                                                 columnNumber: 33
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/BrandsPage.jsx",
-                                            lineNumber: 104,
+                                            lineNumber: 116,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1894,35 +1924,35 @@ function BrandsPage() {
                                                 size: 18
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/BrandsPage.jsx",
-                                                lineNumber: 114,
+                                                lineNumber: 126,
                                                 columnNumber: 33
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/BrandsPage.jsx",
-                                            lineNumber: 110,
+                                            lineNumber: 122,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/BrandsPage.jsx",
-                                    lineNumber: 103,
+                                    lineNumber: 115,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/BrandsPage.jsx",
-                            lineNumber: 92,
+                            lineNumber: 104,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/BrandsPage.jsx",
-                    lineNumber: 77,
+                    lineNumber: 89,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/BrandsPage.jsx",
-                lineNumber: 76,
+                lineNumber: 88,
                 columnNumber: 13
             }, this),
             loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1933,7 +1963,7 @@ function BrandsPage() {
                         size: 32
                     }, void 0, false, {
                         fileName: "[project]/src/components/BrandsPage.jsx",
-                        lineNumber: 123,
+                        lineNumber: 135,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1941,13 +1971,13 @@ function BrandsPage() {
                         children: "Synchronizing Database..."
                     }, void 0, false, {
                         fileName: "[project]/src/components/BrandsPage.jsx",
-                        lineNumber: 124,
+                        lineNumber: 136,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/BrandsPage.jsx",
-                lineNumber: 122,
+                lineNumber: 134,
                 columnNumber: 17
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                 layout: true,
@@ -1970,20 +2000,21 @@ function BrandsPage() {
                             onSave: saveEmail,
                             saving: saving,
                             brochures: brochures[co.company],
-                            loadingBrochures: loadingBrochures[co.company]
+                            loadingBrochures: loadingBrochures[co.company],
+                            onFlag: (status)=>toggleFlag(co.company, status)
                         }, co.company, false, {
                             fileName: "[project]/src/components/BrandsPage.jsx",
-                            lineNumber: 133,
+                            lineNumber: 145,
                             columnNumber: 29
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/components/BrandsPage.jsx",
-                    lineNumber: 131,
+                    lineNumber: 143,
                     columnNumber: 21
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/BrandsPage.jsx",
-                lineNumber: 127,
+                lineNumber: 139,
                 columnNumber: 17
             }, this),
             hasMore && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1994,22 +2025,22 @@ function BrandsPage() {
                     children: "Load More Brands"
                 }, void 0, false, {
                     fileName: "[project]/src/components/BrandsPage.jsx",
-                    lineNumber: 157,
+                    lineNumber: 170,
                     columnNumber: 21
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/BrandsPage.jsx",
-                lineNumber: 156,
+                lineNumber: 169,
                 columnNumber: 17
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/BrandsPage.jsx",
-        lineNumber: 74,
+        lineNumber: 86,
         columnNumber: 9
     }, this);
 }
-function BrandCard({ co, idx, viewMode, isExpanded, onToggle, editingCompany, editEmailValue, setEditEmailValue, onStartEdit, onCancelEdit, onSave, saving, brochures, loadingBrochures }) {
+function BrandCard({ co, idx, viewMode, isExpanded, onToggle, editingCompany, editEmailValue, setEditEmailValue, onStartEdit, onCancelEdit, onSave, saving, brochures, loadingBrochures, onFlag }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
         initial: {
             opacity: 0,
@@ -2026,6 +2057,7 @@ function BrandCard({ co, idx, viewMode, isExpanded, onToggle, editingCompany, ed
         className: `
                 group bg-white rounded-2xl border transition-all duration-300 flex flex-col overflow-hidden relative
                 ${isExpanded ? 'border-zinc-900 shadow-2xl shadow-zinc-900/10 z-10 scale-[1.02]' : 'border-zinc-100 hover:border-zinc-300 hover:shadow-xl hover:shadow-zinc-200/40'}
+                ${co.is_brand_flagged ? 'bg-red-50/50 border-red-200' : 'bg-white'}
                 ${viewMode === 'list' ? 'flex-row items-center p-4' : 'p-6'}
             `,
         children: [
@@ -2034,215 +2066,279 @@ function BrandCard({ co, idx, viewMode, isExpanded, onToggle, editingCompany, ed
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex-1",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex items-start justify-between mb-4",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex items-center gap-3",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: `
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex items-start justify-between mb-4",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center gap-3",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: `
                                 w-10 h-10 rounded-xl flex items-center justify-center text-lg font-black uppercase
                                 ${co.company_email ? 'bg-zinc-900 text-white shadow-lg shadow-zinc-900/20' : 'bg-zinc-100 text-zinc-400'}
                             `,
-                                            children: co.company.charAt(0)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/BrandsPage.jsx",
-                                            lineNumber: 189,
-                                            columnNumber: 29
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                    className: "font-bold text-zinc-900 leading-tight line-clamp-1",
-                                                    children: co.company
-                                                }, void 0, false, {
+                                        children: co.company.charAt(0)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/BrandsPage.jsx",
+                                        lineNumber: 203,
+                                        columnNumber: 29
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                className: "font-bold text-zinc-900 leading-tight line-clamp-1",
+                                                children: co.company
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/BrandsPage.jsx",
+                                                lineNumber: 213,
+                                                columnNumber: 33
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex items-center gap-2 mt-0.5",
+                                                children: !co.company_email ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-wider text-amber-600/80 bg-amber-50 px-2 py-0.5 rounded-full",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$alert$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldAlert$3e$__["ShieldAlert"], {
+                                                            size: 10
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/components/BrandsPage.jsx",
+                                                            lineNumber: 217,
+                                                            columnNumber: 45
+                                                        }, this),
+                                                        " Pending Verification"
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/src/components/BrandsPage.jsx",
-                                                    lineNumber: 199,
-                                                    columnNumber: 33
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "flex items-center gap-2 mt-0.5",
-                                                    children: !co.company_email ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-wider text-amber-600/80 bg-amber-50 px-2 py-0.5 rounded-full",
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$alert$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldAlert$3e$__["ShieldAlert"], {
-                                                                size: 10
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/src/components/BrandsPage.jsx",
-                                                                lineNumber: 203,
-                                                                columnNumber: 45
-                                                            }, this),
-                                                            " Pending Verification"
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/src/components/BrandsPage.jsx",
-                                                        lineNumber: 202,
-                                                        columnNumber: 41
-                                                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-wider text-emerald-600/80 bg-emerald-50 px-2 py-0.5 rounded-full",
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldCheck$3e$__["ShieldCheck"], {
-                                                                size: 10
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/src/components/BrandsPage.jsx",
-                                                                lineNumber: 207,
-                                                                columnNumber: 45
-                                                            }, this),
-                                                            " Verified Partner"
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/src/components/BrandsPage.jsx",
-                                                        lineNumber: 206,
-                                                        columnNumber: 41
-                                                    }, this)
-                                                }, void 0, false, {
+                                                    lineNumber: 216,
+                                                    columnNumber: 41
+                                                }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-wider text-emerald-600/80 bg-emerald-50 px-2 py-0.5 rounded-full",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldCheck$3e$__["ShieldCheck"], {
+                                                            size: 10
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/components/BrandsPage.jsx",
+                                                            lineNumber: 221,
+                                                            columnNumber: 45
+                                                        }, this),
+                                                        " Verified Partner"
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/src/components/BrandsPage.jsx",
-                                                    lineNumber: 200,
-                                                    columnNumber: 33
+                                                    lineNumber: 220,
+                                                    columnNumber: 41
                                                 }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/src/components/BrandsPage.jsx",
-                                            lineNumber: 198,
-                                            columnNumber: 29
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/BrandsPage.jsx",
+                                                lineNumber: 214,
+                                                columnNumber: 33
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/BrandsPage.jsx",
+                                        lineNumber: 212,
+                                        columnNumber: 29
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/BrandsPage.jsx",
+                                lineNumber: 202,
+                                columnNumber: 25
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/BrandsPage.jsx",
+                            lineNumber: 201,
+                            columnNumber: 21
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/BrandsPage.jsx",
+                        lineNumber: 200,
+                        columnNumber: 17
+                    }, this),
+                    co.is_brand_flagged && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-wider text-red-600 bg-red-100 px-2 py-1 rounded-full self-start",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$flag$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Flag$3e$__["Flag"], {
+                                size: 10,
+                                fill: "currentColor"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/BrandsPage.jsx",
+                                lineNumber: 231,
+                                columnNumber: 25
+                            }, this),
+                            " Flagged Hidden"
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/BrandsPage.jsx",
+                        lineNumber: 230,
+                        columnNumber: 21
+                    }, this),
+                    editingCompany === co.company ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex items-center gap-2 mt-2",
+                        onClick: (e)=>e.stopPropagation(),
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                type: "email",
+                                value: editEmailValue,
+                                onChange: (e)=>setEditEmailValue(e.target.value),
+                                placeholder: "Enter email address...",
+                                className: "bg-zinc-50 border border-zinc-200 rounded-lg px-3 py-2 text-sm text-black focus:outline-none focus:border-black w-full",
+                                autoFocus: true
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/BrandsPage.jsx",
+                                lineNumber: 238,
+                                columnNumber: 25
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: onSave,
+                                disabled: saving,
+                                className: "p-2 bg-black text-white rounded-lg hover:opacity-80",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$save$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Save$3e$__["Save"], {
+                                    size: 14
+                                }, void 0, false, {
                                     fileName: "[project]/src/components/BrandsPage.jsx",
-                                    lineNumber: 188,
-                                    columnNumber: 25
+                                    lineNumber: 246,
+                                    columnNumber: 132
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/BrandsPage.jsx",
-                                lineNumber: 187,
-                                columnNumber: 21
-                            }, this),
-                            editingCompany === co.company ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex items-center gap-2 mt-2",
-                                onClick: (e)=>e.stopPropagation(),
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        type: "email",
-                                        value: editEmailValue,
-                                        onChange: (e)=>setEditEmailValue(e.target.value),
-                                        placeholder: "Enter email address...",
-                                        className: "bg-zinc-50 border border-zinc-200 rounded-lg px-3 py-2 text-sm text-black focus:outline-none focus:border-black w-full",
-                                        autoFocus: true
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/BrandsPage.jsx",
-                                        lineNumber: 217,
-                                        columnNumber: 29
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: onSave,
-                                        disabled: saving,
-                                        className: "p-2 bg-black text-white rounded-lg hover:opacity-80",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$save$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Save$3e$__["Save"], {
-                                            size: 14
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/BrandsPage.jsx",
-                                            lineNumber: 225,
-                                            columnNumber: 136
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/BrandsPage.jsx",
-                                        lineNumber: 225,
-                                        columnNumber: 29
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: onCancelEdit,
-                                        disabled: saving,
-                                        className: "p-2 bg-zinc-100 text-zinc-500 rounded-lg hover:bg-zinc-200",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
-                                            size: 14
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/BrandsPage.jsx",
-                                            lineNumber: 226,
-                                            columnNumber: 149
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/BrandsPage.jsx",
-                                        lineNumber: 226,
-                                        columnNumber: 29
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/BrandsPage.jsx",
-                                lineNumber: 216,
+                                lineNumber: 246,
                                 columnNumber: 25
-                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex items-center gap-2 text-zinc-500 group/mail py-1 cursor-pointer",
-                                onClick: onStartEdit,
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__["Mail"], {
-                                        size: 14,
-                                        className: "text-zinc-300 group-hover/mail:text-zinc-900 transition-colors"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/BrandsPage.jsx",
-                                        lineNumber: 230,
-                                        columnNumber: 29
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: `text-xs font-medium truncate max-w-[200px] ${!co.company_email ? "text-zinc-300 italic" : "text-zinc-600"}`,
-                                        children: co.company_email || "No valid email record"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/BrandsPage.jsx",
-                                        lineNumber: 231,
-                                        columnNumber: 29
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$pen$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Edit2$3e$__["Edit2"], {
-                                        size: 10,
-                                        className: "opacity-0 group-hover/mail:opacity-100 text-zinc-400 transition-opacity"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/BrandsPage.jsx",
-                                        lineNumber: 234,
-                                        columnNumber: 29
-                                    }, this)
-                                ]
-                            }, void 0, true, {
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: onCancelEdit,
+                                disabled: saving,
+                                className: "p-2 bg-zinc-100 text-zinc-500 rounded-lg hover:bg-zinc-200",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                                    size: 14
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/BrandsPage.jsx",
+                                    lineNumber: 247,
+                                    columnNumber: 145
+                                }, this)
+                            }, void 0, false, {
                                 fileName: "[project]/src/components/BrandsPage.jsx",
-                                lineNumber: 229,
+                                lineNumber: 247,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/BrandsPage.jsx",
-                        lineNumber: 186,
+                        lineNumber: 237,
+                        columnNumber: 21
+                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex items-center gap-2 text-zinc-500 group/mail py-1 cursor-pointer",
+                        onClick: onStartEdit,
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__["Mail"], {
+                                size: 14,
+                                className: "text-zinc-300 group-hover/mail:text-zinc-900 transition-colors"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/BrandsPage.jsx",
+                                lineNumber: 251,
+                                columnNumber: 25
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: `text-xs font-medium truncate max-w-[200px] ${!co.company_email ? "text-zinc-300 italic" : "text-zinc-600"}`,
+                                children: co.company_email || "No valid email record"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/BrandsPage.jsx",
+                                lineNumber: 252,
+                                columnNumber: 25
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$pen$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Edit2$3e$__["Edit2"], {
+                                size: 10,
+                                className: "opacity-0 group-hover/mail:opacity-100 text-zinc-400 transition-opacity"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/BrandsPage.jsx",
+                                lineNumber: 255,
+                                columnNumber: 25
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/BrandsPage.jsx",
+                        lineNumber: 250,
+                        columnNumber: 21
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/BrandsPage.jsx",
+                lineNumber: 199,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex gap-3 mt-6",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: (e)=>{
+                            e.stopPropagation();
+                            onFlag(co.is_brand_flagged);
+                        },
+                        className: `p-3 rounded-xl transition-all flex items-center justify-center border
+                             ${co.is_brand_flagged ? 'bg-red-100 text-red-600 border-red-200 hover:bg-red-200' : 'bg-zinc-50 text-zinc-400 border-zinc-100 hover:text-red-500 hover:bg-red-50 hover:border-red-100'}
+                         `,
+                        title: co.is_brand_flagged ? "Unflag Brand" : "Flag Brand",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$flag$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Flag$3e$__["Flag"], {
+                            size: 14,
+                            fill: co.is_brand_flagged ? "currentColor" : "none"
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/BrandsPage.jsx",
+                            lineNumber: 270,
+                            columnNumber: 21
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/BrandsPage.jsx",
+                        lineNumber: 261,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: onToggle,
                         className: `
-                        mt-6 w-full py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2
-                        ${isExpanded ? 'bg-zinc-900 text-white shadow-lg' : 'bg-zinc-50 text-zinc-500 hover:bg-zinc-100 hover:text-black'}
-                        ${viewMode === 'list' ? 'mt-0 w-auto px-6' : ''}
-                    `,
+                            flex-1 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2
+                            ${isExpanded ? 'bg-zinc-900 text-white shadow-lg' : 'bg-zinc-50 text-zinc-500 hover:bg-zinc-100 hover:text-black'}
+                        `,
                         children: [
-                            isExpanded ? 'Close Archives' : 'View Archives',
+                            isExpanded ? 'Close Archives' : 'Archives',
                             isExpanded ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$up$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronUp$3e$__["ChevronUp"], {
                                 size: 14
                             }, void 0, false, {
                                 fileName: "[project]/src/components/BrandsPage.jsx",
-                                lineNumber: 251,
+                                lineNumber: 284,
                                 columnNumber: 35
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
                                 size: 14
                             }, void 0, false, {
                                 fileName: "[project]/src/components/BrandsPage.jsx",
-                                lineNumber: 251,
+                                lineNumber: 284,
                                 columnNumber: 61
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/BrandsPage.jsx",
-                        lineNumber: 239,
+                        lineNumber: 273,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                        href: `/brands/${encodeURIComponent(co.company)}`,
+                        className: "flex-1 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2 bg-black text-white hover:bg-zinc-800 shadow-lg shadow-zinc-900/10",
+                        children: [
+                            "View Products ",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$grid$2d$3x3$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Grid3x3$3e$__["Grid3x3"], {
+                                size: 14
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/BrandsPage.jsx",
+                                lineNumber: 291,
+                                columnNumber: 35
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/BrandsPage.jsx",
+                        lineNumber: 287,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/BrandsPage.jsx",
-                lineNumber: 185,
+                lineNumber: 260,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -2270,14 +2366,14 @@ function BrandCard({ co, idx, viewMode, isExpanded, onToggle, editingCompany, ed
                                     size: 16
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/BrandsPage.jsx",
-                                    lineNumber: 267,
+                                    lineNumber: 307,
                                     columnNumber: 37
                                 }, this),
                                 " Retrieving Assets..."
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/BrandsPage.jsx",
-                            lineNumber: 266,
+                            lineNumber: 306,
                             columnNumber: 33
                         }, this) : brochures?.length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "grid grid-cols-1 gap-3",
@@ -2293,12 +2389,12 @@ function BrandCard({ co, idx, viewMode, isExpanded, onToggle, editingCompany, ed
                                                 size: 18
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/BrandsPage.jsx",
-                                                lineNumber: 280,
+                                                lineNumber: 320,
                                                 columnNumber: 49
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/BrandsPage.jsx",
-                                            lineNumber: 279,
+                                            lineNumber: 319,
                                             columnNumber: 45
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2309,7 +2405,7 @@ function BrandCard({ co, idx, viewMode, isExpanded, onToggle, editingCompany, ed
                                                     children: decodeURIComponent(b.source_file || "Document Asset")
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/BrandsPage.jsx",
-                                                    lineNumber: 283,
+                                                    lineNumber: 323,
                                                     columnNumber: 49
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2320,30 +2416,30 @@ function BrandCard({ co, idx, viewMode, isExpanded, onToggle, editingCompany, ed
                                                             size: 8
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/BrandsPage.jsx",
-                                                            lineNumber: 287,
+                                                            lineNumber: 327,
                                                             columnNumber: 66
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/BrandsPage.jsx",
-                                                    lineNumber: 286,
+                                                    lineNumber: 326,
                                                     columnNumber: 49
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/BrandsPage.jsx",
-                                            lineNumber: 282,
+                                            lineNumber: 322,
                                             columnNumber: 45
                                         }, this)
                                     ]
                                 }, idx, true, {
                                     fileName: "[project]/src/components/BrandsPage.jsx",
-                                    lineNumber: 272,
+                                    lineNumber: 312,
                                     columnNumber: 41
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/components/BrandsPage.jsx",
-                            lineNumber: 270,
+                            lineNumber: 310,
                             columnNumber: 33
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "text-center py-8 text-zinc-400 text-xs font-medium",
@@ -2354,46 +2450,46 @@ function BrandCard({ co, idx, viewMode, isExpanded, onToggle, editingCompany, ed
                                         size: 16
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/BrandsPage.jsx",
-                                        lineNumber: 296,
+                                        lineNumber: 336,
                                         columnNumber: 41
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/BrandsPage.jsx",
-                                    lineNumber: 295,
+                                    lineNumber: 335,
                                     columnNumber: 37
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     children: "No archived documents found."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/BrandsPage.jsx",
-                                    lineNumber: 298,
+                                    lineNumber: 338,
                                     columnNumber: 37
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/BrandsPage.jsx",
-                            lineNumber: 294,
+                            lineNumber: 334,
                             columnNumber: 33
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/BrandsPage.jsx",
-                        lineNumber: 264,
+                        lineNumber: 304,
                         columnNumber: 25
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/BrandsPage.jsx",
-                    lineNumber: 258,
+                    lineNumber: 298,
                     columnNumber: 21
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/BrandsPage.jsx",
-                lineNumber: 256,
+                lineNumber: 296,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/BrandsPage.jsx",
-        lineNumber: 171,
+        lineNumber: 184,
         columnNumber: 9
     }, this);
 }
@@ -3259,7 +3355,9 @@ function Home() {
                         lineNumber: 154,
                         columnNumber: 21
                     }, this),
-                    activeTab === 'brands' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BrandsPage$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BrandsPage"], {}, void 0, false, {
+                    activeTab === 'brands' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$BrandsPage$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BrandsPage"], {
+                        onUpdate: ()=>loadData(sessionId)
+                    }, void 0, false, {
                         fileName: "[project]/src/app/page.js",
                         lineNumber: 161,
                         columnNumber: 44

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote</title>
+    <style>
+        :root {
+            --primary-color: {
+                    {
+                    styleConfig.primaryColor
+                }
+            }
+
+            ;
+
+            --secondary-color: {
+                    {
+                    styleConfig.secondaryColor
+                }
+            }
+
+            ;
+
+            --font-family: {
+                    {
+                    styleConfig.fontFamily
+                }
+            }
+
+            ;
+
+            --header-bg: {
+                    {
+                    styleConfig.headerBg
+                }
+            }
+
+            ;
+            --text-color: #1f2937;
+        }
+
+        body {
+            font-family: var(--font-family), sans-serif;
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* --- MODERN (Default) --- */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-transform: uppercase;
+        }
+
+        .doc-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--text-color);
+            margin-bottom: 5px;
+            letter-spacing: -1px;
+        }
+
+        /* --- CLASSIC OVERRIDES --- */
+        body.classic {
+            font-family: "Times New Roman", serif;
+        }
+
+        body.classic .header {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-bottom: 4px double #e5e7eb;
+        }
+
+        body.classic .addresses {
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+        }
+
+        body.classic th {
+            background-color: #f9fafb;
+            color: #374151;
+            border-bottom: 1px solid #000;
+            text-transform: none;
+            font-variant: small-caps;
+            font-size: 13px;
+        }
+
+        body.classic .doc-title {
+            font-family: serif;
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        /* --- BOLD OVERRIDES --- */
+        body.bold {
+            padding: 0;
+        }
+
+        body.bold .header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px;
+            margin-bottom: 20px;
+            border: none;
+            align-items: center;
+        }
+
+        body.bold .logo {
+            color: white;
+            font-size: 40px;
+            letter-spacing: -2px;
+        }
+
+        body.bold .doc-title {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        body.bold .addresses {
+            padding: 0 40px;
+        }
+
+        body.bold table {
+            margin: 20px 40px;
+            width: calc(100% - 80px);
+        }
+
+        body.bold th {
+            background-color: #000;
+            color: white;
+        }
+
+        body.bold .total-section {
+            padding-right: 40px;
+        }
+
+        body.bold .total-row.final {
+            font-size: 24px;
+            background: #000;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        body.bold .meta-label {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        body.bold .doc-meta {
+            text-align: right;
+            color: white;
+        }
+
+        body.bold .address-block h3 {
+            color: var(--primary-color);
+            font-size: 14px;
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 2px;
+        }
+
+        .doc-meta {
+            text-align: right;
+        }
+
+        .meta-item {
+            margin-bottom: 4px;
+            font-size: 13px;
+        }
+
+        .meta-label {
+            font-weight: 600;
+            color: #6b7280;
+            margin-right: 8px;
+        }
+
+        .addresses {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .address-block h3 {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #9ca3af;
+            margin-bottom: 10px;
+        }
+
+        .address-block p {
+            margin: 0;
+            white-space: pre-line;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        th {
+            text-align: left;
+            padding: 12px;
+            background-color: var(--header-bg);
+            color: var(--primary-color);
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .total-section {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+
+        .total-box {
+            width: 250px;
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+        }
+
+        .total-row.final {
+            font-size: 18px;
+            font-weight: bold;
+            border-top: 2px solid var(--primary-color);
+            margin-top: 8px;
+            padding-top: 12px;
+            color: var(--primary-color);
+        }
+
+        .notes {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #f9fafb;
+            border-radius: 8px;
+            font-size: 12px;
+            color: #4b5563;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .notes h4 {
+            margin: 0 0 8px 0;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #9ca3af;
+        }
+
+        .currency-symbol {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body class="{{styleConfig.templateId}}">
+    <div class="header">
+        <div class="logo">
+            {{#if company.logoUrl}}
+            <img src="{{company.logoUrl}}" alt="Logo" style="height: 40px;" />
+            {{else}}
+            {{company.name}}
+            {{/if}}
+        </div>
+        <div class="doc-meta">
+            <div class="doc-title">QUOTATION</div>
+            <div class="meta-item"><span class="meta-label">Quote #:</span> {{meta.invoiceNumber}}</div>
+            <div class="meta-item"><span class="meta-label">Date:</span> {{meta.date}}</div>
+            <div class="meta-item"><span class="meta-label">Valid Until:</span> {{meta.dueDate}}</div>
+        </div>
+    </div>
+
+    <div class="addresses">
+        <div class="address-block">
+            <h3>From</h3>
+            <p><strong>{{company.name}}</strong></p>
+            <p>{{company.address}}</p>
+            <p>{{company.email}}</p>
+        </div>
+        <div class="address-block">
+            <h3>To</h3>
+            <p><strong>{{client.name}}</strong></p>
+            <p>{{client.address}}</p>
+            <p>{{client.email}}</p>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th width="50%">Description</th>
+                <th width="15%" style="text-align: right;">Qt.</th>
+                <th width="15%" style="text-align: right;">Price</th>
+                <th width="20%" style="text-align: right;">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each items}}
+            <tr>
+                <td>
+                    <strong>{{this.name}}</strong>
+                    {{#if this.description}}
+                    <div style="font-size: 12px; color: #6b7280; margin-top: 2px;">{{this.description}}</div>
+                    {{/if}}
+                </td>
+                <td style="text-align: right;">{{this.quantity}}</td>
+                <td style="text-align: right;"><span class="currency-symbol">{{../currency}}</span>{{this.price}}</td>
+                <td style="text-align: right;"><span class="currency-symbol">{{../currency}}</span>{{this.total}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <div class="total-section">
+        <div class="total-box">
+            <div class="total-row">
+                <span>Subtotal</span>
+                <span><span class="currency-symbol">{{currency}}</span>{{totals.subtotal}}</span>
+            </div>
+
+            {{#if totals.tax}}
+            <div class="total-row">
+                <span>Tax ({{totals.taxRate}}%)</span>
+                <span><span class="currency-symbol">{{currency}}</span>{{totals.tax}}</span>
+            </div>
+            {{/if}}
+
+            <div class="total-row final">
+                <span>Grand Total</span>
+                <span><span class="currency-symbol">{{currency}}</span>{{totals.grandTotal}}</span>
+            </div>
+        </div>
+    </div>
+
+    {{#if notes}}
+    <div class="notes">
+        <h4>Terms & Conditions</h4>
+        <p>{{notes}}</p>
+    </div>
+    {{/if}}
+
+    <div style="margin-top: 40px; text-align: center; font-size: 12px; color: #9ca3af;">
+        This quotation is valid for 14 days from the date of issue.
+    </div>
+</body>
+
+</html>

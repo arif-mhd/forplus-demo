@@ -2,10 +2,10 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Building2, Mail, FileText, AlertTriangle, ChevronDown, ChevronUp, Save, Edit2, X, ExternalLink, Search, Grid3x3, List, Loader2, Check, LayoutGrid, ShieldCheck, ShieldAlert } from 'lucide-react';
+import { Building2, Mail, FileText, AlertTriangle, ChevronDown, ChevronUp, Save, Edit2, X, ExternalLink, Search, Grid3x3, List, Loader2, Check, LayoutGrid, ShieldCheck, ShieldAlert, Flag } from 'lucide-react';
 import { api } from '../lib/api';
 
-export function BrandsPage() {
+export function BrandsPage({ onUpdate }) {
     const [companies, setCompanies] = useState([]);
     const [loading, setLoading] = useState(true);
     const [expandedCompany, setExpandedCompany] = useState(null);
@@ -23,7 +23,7 @@ export function BrandsPage() {
     const loadCompanies = async () => {
         setLoading(true);
         try {
-            const data = await api.getCompanies();
+            const data = await api.getCompanies(true);
 
             // Deduplicate companies based on name
             const uniqueCompanies = Object.values(data.reduce((acc, curr) => {
@@ -64,6 +64,18 @@ export function BrandsPage() {
             setCompanies(prev => prev.map(c => c.company === editingCompany ? { ...c, company_email: editEmailValue } : c));
             setEditingCompany(null);
         } catch (err) { alert("Failed to update email"); } finally { setSaving(false); }
+    };
+
+    const toggleFlag = async (company, currentStatus) => {
+        if (!confirm(`Are you sure you want to ${currentStatus ? 'unflag' : 'flag'} this brand? Flagged brands will be hidden from the public catalog.`)) return;
+        try {
+            await api.updateCompanyEmail(company, null, null, !currentStatus);
+            setCompanies(prev => prev.map(c => c.company === company ? { ...c, is_brand_flagged: !currentStatus } : c));
+            if (onUpdate) onUpdate();
+        } catch (err) {
+            console.error(err);
+            alert("Failed to update flag status");
+        }
     };
 
     const filteredCompanies = companies.filter(co => (co.company || "").toLowerCase().includes(searchQuery.toLowerCase()));
@@ -146,6 +158,7 @@ export function BrandsPage() {
                                 saving={saving}
                                 brochures={brochures[co.company]}
                                 loadingBrochures={loadingBrochures[co.company]}
+                                onFlag={(status) => toggleFlag(co.company, status)}
                             />
                         ))}
                     </AnimatePresence>
@@ -166,7 +179,7 @@ export function BrandsPage() {
     );
 }
 
-function BrandCard({ co, idx, viewMode, isExpanded, onToggle, editingCompany, editEmailValue, setEditEmailValue, onStartEdit, onCancelEdit, onSave, saving, brochures, loadingBrochures }) {
+function BrandCard({ co, idx, viewMode, isExpanded, onToggle, editingCompany, editEmailValue, setEditEmailValue, onStartEdit, onCancelEdit, onSave, saving, brochures, loadingBrochures, onFlag }) {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -178,6 +191,7 @@ function BrandCard({ co, idx, viewMode, isExpanded, onToggle, editingCompany, ed
                     ? 'border-zinc-900 shadow-2xl shadow-zinc-900/10 z-10 scale-[1.02]'
                     : 'border-zinc-100 hover:border-zinc-300 hover:shadow-xl hover:shadow-zinc-200/40'
                 }
+                ${co.is_brand_flagged ? 'bg-red-50/50 border-red-200' : 'bg-white'}
                 ${viewMode === 'list' ? 'flex-row items-center p-4' : 'p-6'}
             `}
         >
@@ -211,45 +225,71 @@ function BrandCard({ co, idx, viewMode, isExpanded, onToggle, editingCompany, ed
                             </div>
                         </div>
                     </div>
-
-                    {editingCompany === co.company ? (
-                        <div className="flex items-center gap-2 mt-2" onClick={e => e.stopPropagation()}>
-                            <input
-                                type="email"
-                                value={editEmailValue}
-                                onChange={(e) => setEditEmailValue(e.target.value)}
-                                placeholder="Enter email address..."
-                                className="bg-zinc-50 border border-zinc-200 rounded-lg px-3 py-2 text-sm text-black focus:outline-none focus:border-black w-full"
-                                autoFocus
-                            />
-                            <button onClick={onSave} disabled={saving} className="p-2 bg-black text-white rounded-lg hover:opacity-80"><Save size={14} /></button>
-                            <button onClick={onCancelEdit} disabled={saving} className="p-2 bg-zinc-100 text-zinc-500 rounded-lg hover:bg-zinc-200"><X size={14} /></button>
-                        </div>
-                    ) : (
-                        <div className="flex items-center gap-2 text-zinc-500 group/mail py-1 cursor-pointer" onClick={onStartEdit}>
-                            <Mail size={14} className="text-zinc-300 group-hover/mail:text-zinc-900 transition-colors" />
-                            <span className={`text-xs font-medium truncate max-w-[200px] ${!co.company_email ? "text-zinc-300 italic" : "text-zinc-600"}`}>
-                                {co.company_email || "No valid email record"}
-                            </span>
-                            <Edit2 size={10} className="opacity-0 group-hover/mail:opacity-100 text-zinc-400 transition-opacity" />
-                        </div>
-                    )}
                 </div>
+                {co.is_brand_flagged && (
+                    <div className="flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-wider text-red-600 bg-red-100 px-2 py-1 rounded-full self-start">
+                        <Flag size={10} fill="currentColor" /> Flagged Hidden
+                    </div>
+                )}
+
+
+                {editingCompany === co.company ? (
+                    <div className="flex items-center gap-2 mt-2" onClick={e => e.stopPropagation()}>
+                        <input
+                            type="email"
+                            value={editEmailValue}
+                            onChange={(e) => setEditEmailValue(e.target.value)}
+                            placeholder="Enter email address..."
+                            className="bg-zinc-50 border border-zinc-200 rounded-lg px-3 py-2 text-sm text-black focus:outline-none focus:border-black w-full"
+                            autoFocus
+                        />
+                        <button onClick={onSave} disabled={saving} className="p-2 bg-black text-white rounded-lg hover:opacity-80"><Save size={14} /></button>
+                        <button onClick={onCancelEdit} disabled={saving} className="p-2 bg-zinc-100 text-zinc-500 rounded-lg hover:bg-zinc-200"><X size={14} /></button>
+                    </div>
+                ) : (
+                    <div className="flex items-center gap-2 text-zinc-500 group/mail py-1 cursor-pointer" onClick={onStartEdit}>
+                        <Mail size={14} className="text-zinc-300 group-hover/mail:text-zinc-900 transition-colors" />
+                        <span className={`text-xs font-medium truncate max-w-[200px] ${!co.company_email ? "text-zinc-300 italic" : "text-zinc-600"}`}>
+                            {co.company_email || "No valid email record"}
+                        </span>
+                        <Edit2 size={10} className="opacity-0 group-hover/mail:opacity-100 text-zinc-400 transition-opacity" />
+                    </div>
+                )}
+            </div>
+
+            <div className="flex gap-3 mt-6">
+                <button
+                    onClick={(e) => { e.stopPropagation(); onFlag(co.is_brand_flagged); }}
+                    className={`p-3 rounded-xl transition-all flex items-center justify-center border
+                             ${co.is_brand_flagged
+                            ? 'bg-red-100 text-red-600 border-red-200 hover:bg-red-200'
+                            : 'bg-zinc-50 text-zinc-400 border-zinc-100 hover:text-red-500 hover:bg-red-50 hover:border-red-100'}
+                         `}
+                    title={co.is_brand_flagged ? "Unflag Brand" : "Flag Brand"}
+                >
+                    <Flag size={14} fill={co.is_brand_flagged ? "currentColor" : "none"} />
+                </button>
 
                 <button
                     onClick={onToggle}
                     className={`
-                        mt-6 w-full py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2
-                        ${isExpanded
+                            flex-1 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2
+                            ${isExpanded
                             ? 'bg-zinc-900 text-white shadow-lg'
                             : 'bg-zinc-50 text-zinc-500 hover:bg-zinc-100 hover:text-black'
                         }
-                        ${viewMode === 'list' ? 'mt-0 w-auto px-6' : ''}
-                    `}
+                        `}
                 >
-                    {isExpanded ? 'Close Archives' : 'View Archives'}
+                    {isExpanded ? 'Close Archives' : 'Archives'}
                     {isExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                 </button>
+
+                <a
+                    href={`/brands/${encodeURIComponent(co.company)}`}
+                    className="flex-1 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2 bg-black text-white hover:bg-zinc-800 shadow-lg shadow-zinc-900/10"
+                >
+                    View Products <Grid3x3 size={14} />
+                </a>
             </div>
 
             {/* Expanded Content */}
@@ -302,6 +342,6 @@ function BrandCard({ co, idx, viewMode, isExpanded, onToggle, editingCompany, ed
                     </motion.div>
                 )}
             </AnimatePresence>
-        </motion.div>
+        </motion.div >
     );
 }

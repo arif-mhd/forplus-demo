@@ -29,11 +29,16 @@ namespace LuminaScan.Functions
             if (!int.TryParse(req.Query["skip"], out int skip)) skip = 0;
             if (!int.TryParse(req.Query["limit"], out int limit)) limit = 20;
 
+            bool includeFlagged = req.Query["includeFlagged"] == "true";
+
             var dbName = Environment.GetEnvironmentVariable("COSMOS_DB_NAME") ?? "lumina-db";
             var containerName = Environment.GetEnvironmentVariable("COSMOS_CONTAINER_PRODUCTS") ?? "products";
             var container = _cosmosClient.GetContainer(dbName, containerName);
 
-            var sql = new QueryDefinition("SELECT * FROM c WHERE (CONTAINS(LOWER(c.name), @q) OR CONTAINS(LOWER(c.description), @q) OR CONTAINS(LOWER(c.company), @q)) ORDER BY c._ts DESC OFFSET @skip LIMIT @limit")
+            string flagFilter = " AND (NOT IS_DEFINED(c.is_brand_flagged) OR c.is_brand_flagged = false) AND (NOT IS_DEFINED(c.is_product_flagged) OR c.is_product_flagged = false)";
+            if (includeFlagged) flagFilter = "";
+
+            var sql = new QueryDefinition($"SELECT * FROM c WHERE (CONTAINS(LOWER(c.name), @q) OR CONTAINS(LOWER(c.description), @q) OR CONTAINS(LOWER(c.company), @q)){flagFilter} ORDER BY c._ts DESC OFFSET @skip LIMIT @limit")
                 .WithParameter("@q", (q ?? "").ToLower())
                 .WithParameter("@skip", skip)
                 .WithParameter("@limit", limit);
@@ -42,14 +47,14 @@ namespace LuminaScan.Functions
             if (!string.IsNullOrEmpty(company))
             {
                 // In a real app, use proper WHERE composition
-                sql = new QueryDefinition("SELECT * FROM c WHERE c.company = @company ORDER BY c._ts DESC OFFSET @skip LIMIT @limit")
+                sql = new QueryDefinition($"SELECT * FROM c WHERE c.company = @company{flagFilter} ORDER BY c._ts DESC OFFSET @skip LIMIT @limit")
                     .WithParameter("@company", company)
                     .WithParameter("@skip", skip)
                     .WithParameter("@limit", limit);
             }
             if (string.IsNullOrEmpty(q) && string.IsNullOrEmpty(company))
             {
-                 sql = new QueryDefinition("SELECT * FROM c ORDER BY c._ts DESC OFFSET @skip LIMIT @limit")
+                 sql = new QueryDefinition($"SELECT * FROM c WHERE 1=1{flagFilter} ORDER BY c._ts DESC OFFSET @skip LIMIT @limit")
                     .WithParameter("@skip", skip)
                     .WithParameter("@limit", limit);
             }
@@ -66,17 +71,18 @@ namespace LuminaScan.Functions
 
             // 2. Get Total Count
             string countSqlText = "SELECT VALUE COUNT(1) FROM c";
-            if (!string.IsNullOrEmpty(q) || !string.IsNullOrEmpty(company))
+            // Reconstruct WHERE clause for count
+            if (!string.IsNullOrEmpty(company))
             {
-                 // Reconstruct WHERE clause for count
-                 if (!string.IsNullOrEmpty(company))
-                 {
-                     countSqlText += " WHERE c.company = @company";
-                 }
-                 else 
-                 {
-                     countSqlText += " WHERE (CONTAINS(LOWER(c.name), @q) OR CONTAINS(LOWER(c.description), @q) OR CONTAINS(LOWER(c.company), @q))";
-                 }
+                countSqlText += $" WHERE c.company = @company{flagFilter}";
+            }
+            else if (string.IsNullOrEmpty(q))
+            {
+                countSqlText += $" WHERE 1=1{flagFilter}";
+            }
+            else
+            {
+                countSqlText += $" WHERE (CONTAINS(LOWER(c.name), @q) OR CONTAINS(LOWER(c.description), @q) OR CONTAINS(LOWER(c.company), @q)){flagFilter}";
             }
 
             var countQuery = new QueryDefinition(countSqlText);
@@ -150,11 +156,16 @@ namespace LuminaScan.Functions
         [Function("companies")]
         public async Task<IActionResult> GetCompanies([HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequest req)
         {
-             var dbName = Environment.GetEnvironmentVariable("COSMOS_DB_NAME") ?? "lumina-db";
+            bool includeFlagged = req.Query["includeFlagged"] == "true";
+
+            var dbName = Environment.GetEnvironmentVariable("COSMOS_DB_NAME") ?? "lumina-db";
             var containerName = Environment.GetEnvironmentVariable("COSMOS_CONTAINER_PRODUCTS") ?? "products";
             var container = _cosmosClient.GetContainer(dbName, containerName);
 
-            var sql = "SELECT DISTINCT c.company, c.company_email, c.company_address FROM c WHERE c.company != null";
+            string flagFilter = " AND (NOT IS_DEFINED(c.is_brand_flagged) OR c.is_brand_flagged = false)";
+            if (includeFlagged) flagFilter = "";
+
+            var sql = $"SELECT DISTINCT c.company, c.company_email, c.company_address, c.is_brand_flagged FROM c WHERE c.company != null{flagFilter}";
             var iterator = container.GetItemQueryIterator<CompanyDto>(new QueryDefinition(sql));
             var companies = new List<CompanyDto>();
 
@@ -227,6 +238,7 @@ namespace LuminaScan.Functions
              string company = data?.company;
              string email = data?.email;
              string address = data?.address;
+             bool? isBrandFlagged = data?.is_brand_flagged;
 
              if (string.IsNullOrEmpty(company)) return new BadRequestObjectResult("Company is required.");
              
@@ -246,7 +258,7 @@ namespace LuminaScan.Functions
                  foreach(var item in response) 
                  {
                      bool changed = false;
-                     if (item.CompanyEmail != email) 
+                     if (email != null && item.CompanyEmail != email) 
                      {
                          item.CompanyEmail = email;
                          changed = true;
@@ -256,6 +268,12 @@ namespace LuminaScan.Functions
                          item.CompanyAddress = address;
                          changed = true;
                      }
+                     if (isBrandFlagged.HasValue && item.IsBrandFlagged != isBrandFlagged.Value)
+                     {
+                         item.IsBrandFlagged = isBrandFlagged.Value;
+                         changed = true;
+                     }
+
                      if (changed)
                      {
                          // Partition Key is Company
@@ -266,6 +284,47 @@ namespace LuminaScan.Functions
              await Task.WhenAll(tasks);
              
              return new OkObjectResult(new { message = $"Updated details for company {company}." });
+        }
+
+
+        [Function("update_product")]
+        public async Task<IActionResult> UpdateProduct([HttpTrigger(AuthorizationLevel.Anonymous, "put")] HttpRequest req)
+        {
+            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+            Product? data = JsonConvert.DeserializeObject<Product>(requestBody);
+
+            if (data == null || string.IsNullOrEmpty(data.Id) || string.IsNullOrEmpty(data.Company))
+            {
+                 return new BadRequestObjectResult("Product ID and Company are required.");
+            }
+
+            var dbName = Environment.GetEnvironmentVariable("COSMOS_DB_NAME") ?? "lumina-db";
+            var containerName = Environment.GetEnvironmentVariable("COSMOS_CONTAINER_PRODUCTS") ?? "products";
+            var container = _cosmosClient.GetContainer(dbName, containerName);
+
+            try
+            {
+                ItemResponse<Product> response = await container.ReadItemAsync<Product>(data.Id, new PartitionKey(data.Company));
+                Product existing = response.Resource;
+                
+                existing.Name = data.Name;
+                existing.Description = data.Description;
+                existing.Specifications = data.Specifications;
+                existing.IsProductFlagged = data.IsProductFlagged;
+                
+                await container.ReplaceItemAsync(existing, existing.Id, new PartitionKey(existing.Company));
+                
+                return new OkObjectResult(existing);
+            }
+            catch (CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return new NotFoundObjectResult("Product not found");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error updating product: {ex.Message}");
+                return new StatusCodeResult(StatusCodes.Status500InternalServerError);
+            }
         }
 
         private string? SignBlobUrl(string? blobUrl)

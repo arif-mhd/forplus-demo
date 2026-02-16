@@ -32,7 +32,7 @@ export const api = {
         return response.json();
     },
 
-    searchProducts: async ({ query = '', company = [], source_file = '', skip = 0, limit = 20 } = {}) => {
+    searchProducts: async ({ query = '', company = [], source_file = '', skip = 0, limit = 20, includeFlagged = false } = {}) => {
         const params = new URLSearchParams();
         if (query) params.append('q', query);
 
@@ -47,6 +47,7 @@ export const api = {
         if (source_file) params.append('source_file', source_file);
         params.append('skip', skip);
         params.append('limit', limit);
+        if (includeFlagged) params.append('includeFlagged', 'true');
 
         const response = await fetch(`${API_URL}/search_products?${params.toString()}`);
         if (!response.ok) {
@@ -55,8 +56,9 @@ export const api = {
         return response.json(); // Returns { products: [], total: number }
     },
 
-    getCompanies: async () => {
-        const response = await fetch(`${API_URL}/companies`);
+    getCompanies: async (includeFlagged = false) => {
+        const url = includeFlagged ? `${API_URL}/companies?includeFlagged=true` : `${API_URL}/companies`;
+        const response = await fetch(url);
         if (!response.ok) {
             throw new Error("Failed to fetch companies");
         }
@@ -69,16 +71,18 @@ export const api = {
         return response.json();
     },
 
-    updateCompanyEmail: async (company, email, address = null) => {
-        const body = { company, email };
+    updateCompanyEmail: async (company, email, address = null, isBrandFlagged = null) => {
+        const body = { company };
+        if (email !== null && email !== undefined) body.email = email;
         if (address !== null) body.address = address;
+        if (isBrandFlagged !== null) body.is_brand_flagged = isBrandFlagged;
 
         const response = await fetch(`${API_URL}/update_company_email`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(body)
         });
-        if (!response.ok) throw new Error("Failed to update email");
+        if (!response.ok) throw new Error("Failed to update company details");
         return response.json();
     },
 
@@ -112,5 +116,15 @@ export const api = {
         });
         if (!res.ok) throw new Error('Failed to remove from cart');
         return true;
+    },
+
+    updateProduct: async (product) => {
+        const res = await fetch(`${API_URL}/update_product`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(product)
+        });
+        if (!res.ok) throw new Error('Failed to update product');
+        return res.json();
     }
 };
